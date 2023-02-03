@@ -1,7 +1,7 @@
 # mcp9808
 Linux device driver for MCP9808 temperature sensor
 
-### Compiling the module for Linux ARM64
+### Compiling the module for Linux (arm64)
 export ARCH=arm64
 
 export CROSS_COMPILE=aarch64-linux-gnu-
@@ -33,7 +33,7 @@ sudo ./mcp
 ### NOTE
 The floating point temperature calculation is done in the demo app (in Linux User Space).
 
-# Remove the Module and Overlay
+### Remove the Module and Overlay
 sudo rmmod mcp9808
 
 sudo dtoverlay -d mcp9808_overlay
