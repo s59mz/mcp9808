@@ -1,7 +1,7 @@
 # mcp9808
 Linux device driver for MCP9808 temperature sensor
 
-### Compiling the module for Linux
+### Compiling the module for Linux ARM64
 export ARCH=arm64
 
 export CROSS_COMPILE=aarch64-linux-gnu-
