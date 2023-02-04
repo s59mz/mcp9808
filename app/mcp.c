@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
 		printf("Can't close, ret = %d\n", ret);
 	}
 
-	temp = ((float) (ioctl_dev.temp & 0x1fff))/16;
+	temp = convert_temp(ioctl_dev.temp);
 
 	printf("Temp: %.2f'C,\n", temp);
 	
