@@ -13,7 +13,9 @@
 #define IOCTL_MCP9808_READ_TEMP		_IOR('M', 1, struct ioctl_dev)
 
 // convert tempereture register value to Celsius degrees
-#define convert_temp(x)	(((float) ((x) & 0x1fff))/16);
+#define convert_temp(x)	(((x) & 0x1000) ? \
+						(256 - ((float) ((x) & 0x0fff))/16) : \
+						(((float) ((x) & 0x1fff))/16));
 
 struct ioctl_dev {
 	unsigned int temp;	// temperature reg data - need to be converted
